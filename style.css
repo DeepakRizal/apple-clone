@@ -16,7 +16,6 @@ header {
   display: flex;
   align-items: center;
   gap: 30px;
-  color: #89898a;
   font-size: 14px;
 }
 
@@ -24,4 +23,62 @@ header {
   list-style-type: none;
   padding: 5px 7px;
   cursor: pointer;
+}
+
+.links li a {
+  text-decoration: none;
+  color: #89898a;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+
+  padding: 40px 310px;
+  background-color: #fafafc;
+  width: 100%;
+  left: 0;
+}
+
+.dropdown-group {
+  display: flex;
+  gap: 30px;
+}
+
+.dropdown-group ul h2,
+.dropdown-group ul h3 {
+  color: #6e6e73;
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 15px;
+}
+
+.dropdown-group ul li {
+  list-style-type: none;
+  line-height: 1.5;
+  color: #333336;
+}
+
+.dropdown-group .products {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dropdown-group .products li:hover {
+  color: black;
+}
+
+.explore,
+.compare,
+.switch {
+  font-weight: 100;
+  font-size: 13px;
+}
+
+.compare {
+  margin-top: 30px;
+}
+
+.explore {
+  margin-top: 20px;
 }
