@@ -12,13 +12,8 @@ dropDowns.forEach((dropdown) => {
     content.style.pointerEvents = "auto";
   });
 
-  content.addEventListener("mouseenter", () => {
-    content.style.height = "500px";
-    content.style.opacity = "1";
-    content.style.pointerEvents = "auto";
-  });
-
-  dropdown.addEventListener("mouseleave", () => {
+  // hide the dropdown when the cursor leave the dropdown
+  content.addEventListener("mouseleave", (e) => {
     content.style.opacity = "0";
     setTimeout(() => {
       content.style.height = "0";
