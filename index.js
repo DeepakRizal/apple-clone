@@ -32,7 +32,16 @@ searchButton.addEventListener("click", (e) => {
 
 bagButton.addEventListener("click", (e) => {
   const bagDropdown = e.target.nextElementSibling;
-  console.log(bagDropdown);
 
   bagDropdown.classList.toggle("display");
+});
+
+search.addEventListener("mouseleave", (e) => {
+  const searchDropdown = e.target.querySelector(".search-dropdown-content");
+  searchDropdown.classList.remove("display");
+});
+
+bag.addEventListener("mouseleave", (e) => {
+  const bagDropdown = e.target.querySelector(".bag-dropdown-content");
+  bagDropdown.classList.remove("display");
 });
