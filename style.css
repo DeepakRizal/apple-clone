@@ -171,6 +171,34 @@ header {
   gap: 10px;
 }
 
+/* tablet styling */
+
+.tab-dropdown-content {
+  display: none;
+}
+
+.tab-dropdown {
+  margin: 0 19px;
+}
+
+.tab-links li {
+  list-style-type: none;
+}
+
+.tab-links li > a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #333336;
+  font-weight: bold;
+}
+
+.tab-navbar {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  height: 100vh;
+}
+
 /* media queries */
 @media (max-width: 850px) {
   .dropdown {
