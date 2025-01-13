@@ -3,6 +3,7 @@ const search = document.querySelector(".search");
 const bag = document.querySelector(".bag");
 const searchButton = document.querySelector(".search-button");
 const bagButton = document.querySelector(".bag-button");
+const contentWrapper = document.querySelector(".main-content");
 
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
@@ -13,6 +14,7 @@ dropDowns.forEach((dropdown) => {
     content.style.height = "500px";
     content.style.opacity = "1";
     content.style.pointerEvents = "auto";
+    contentWrapper.classList.add("blur");
   });
 
   // Hide the dropdown when the cursor leaves the dropdown
@@ -21,6 +23,7 @@ dropDowns.forEach((dropdown) => {
     setTimeout(() => {
       content.style.height = "0";
       content.style.pointerEvents = "none";
+      contentWrapper.classList.remove("blur");
     }, 200);
   });
 });

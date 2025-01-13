@@ -154,3 +154,11 @@ header {
 .bag-dropdown-content p {
   color: #6e6e73;
 }
+.blur {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+.main-content {
+  height: 300px;
+  margin-top: 600px;
+}
