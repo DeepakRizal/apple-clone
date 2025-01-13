@@ -162,3 +162,36 @@ header {
   height: 300px;
   margin-top: 600px;
 }
+
+.none {
+  display: none;
+}
+.search-bag {
+  display: flex;
+  gap: 10px;
+}
+
+/* media queries */
+@media (max-width: 850px) {
+  .dropdown {
+    display: none;
+  }
+  .navigation {
+    display: block;
+  }
+  .search-bag {
+    display: block;
+  }
+  .links {
+    justify-content: space-between;
+    margin: 0 10px;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .none {
+    display: block;
+  }
+}
