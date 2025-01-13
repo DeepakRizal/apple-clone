@@ -1,4 +1,7 @@
 const dropDowns = document.querySelectorAll(".dropdown");
+const search = document.querySelector(".search");
+const bag = document.querySelector(".bag");
+const searchButton = document.querySelector(".search-button");
 
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
@@ -19,4 +22,10 @@ dropDowns.forEach((dropdown) => {
       content.style.pointerEvents = "none";
     }, 200);
   });
+});
+
+searchButton.addEventListener("click", (e) => {
+  const searchDropdown = e.target.nextElementSibling;
+  searchDropdown.style.pointerEvents = "auto";
+  searchDropdown.classList.toggle("display");
 });
