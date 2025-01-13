@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", serif;
 }
 
 header {
@@ -43,7 +46,7 @@ header {
   opacity: 0;
   left: 0;
   pointer-events: none;
-  transition: all 0.7s ease;
+  transition: height 0.2s ease, opacity 0.2s ease;
 }
 
 .dropdown-group {
@@ -89,22 +92,25 @@ header {
   margin-top: 20px;
 }
 /* search styles */
-.search-dropdown-content {
+.search-dropdown-content,
+.bag-dropdown-content {
   padding-top: 20px;
   padding-left: 312px;
 }
-.search button {
+.search button,
+.bag button {
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
-.search button img {
+.search button img,
+.bag button img {
   pointer-events: none;
 }
 
 .display {
-  height: 500px;
+  height: 400px;
   opacity: 1;
   pointer-events: auto;
 }
@@ -121,4 +127,30 @@ header {
   background-color: #fafafc;
   font-size: 25px;
   font-weight: bold;
+}
+
+/* bag dropdown styles */
+.bag-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.bag-group p a {
+  text-decoration: underline;
+  color: blue;
+}
+.bag-dropdown-content {
+  padding-left: 280px;
+}
+
+.bag-dropdown-content ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bag-dropdown-content p {
+  color: #6e6e73;
 }

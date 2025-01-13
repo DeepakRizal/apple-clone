@@ -2,6 +2,7 @@ const dropDowns = document.querySelectorAll(".dropdown");
 const search = document.querySelector(".search");
 const bag = document.querySelector(".bag");
 const searchButton = document.querySelector(".search-button");
+const bagButton = document.querySelector(".bag-button");
 
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
@@ -26,6 +27,12 @@ dropDowns.forEach((dropdown) => {
 
 searchButton.addEventListener("click", (e) => {
   const searchDropdown = e.target.nextElementSibling;
-  searchDropdown.style.pointerEvents = "auto";
   searchDropdown.classList.toggle("display");
+});
+
+bagButton.addEventListener("click", (e) => {
+  const bagDropdown = e.target.nextElementSibling;
+  console.log(bagDropdown);
+
+  bagDropdown.classList.toggle("display");
 });
