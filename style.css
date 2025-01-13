@@ -38,6 +38,7 @@ header {
   height: 0;
   opacity: 0;
   left: 0;
+  pointer-events: none;
   transition: all 0.7s ease;
 }
 
