@@ -4,6 +4,7 @@ const bag = document.querySelector(".bag");
 const searchButton = document.querySelector(".search-button");
 const bagButton = document.querySelector(".bag-button");
 const contentWrapper = document.querySelector(".main-content");
+const tabLinks = document.querySelectorAll(".tab-link");
 
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
@@ -47,4 +48,16 @@ search.addEventListener("mouseleave", (e) => {
 bag.addEventListener("mouseleave", (e) => {
   const bagDropdown = e.target.querySelector(".bag-dropdown-content");
   bagDropdown.classList.remove("display");
+});
+
+tabLinks.forEach((tablink) => {
+  tablink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const parentElement = e.target.closest(".tab-links");
+    parentElement.innerHTML = "";
+
+    const tabDropdown = e.target.nextElementSibling;
+    tabDropdown.style.display = "block";
+    parentElement.appendChild(tabDropdown);
+  });
 });
