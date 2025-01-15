@@ -158,10 +158,10 @@ header {
   filter: blur(5px);
   transition: filter 0.3s ease;
 }
-.main-content {
+/* .main-content {
   height: 300px;
   margin-top: 600px;
-}
+} */
 
 .none {
   display: none;
@@ -199,6 +199,10 @@ header {
     display: block;
   }
 
+  .tab-none {
+    display: none;
+  }
+
   /* tablet styling */
 
   .tab-dropdown {
@@ -206,6 +210,7 @@ header {
   }
   .tab-dropdown-content {
     display: none;
+    padding: 30px 40px;
   }
 
   .tab-dropdown-group ul li {
@@ -258,7 +263,32 @@ header {
     padding-left: 30px;
     height: 100vh;
   }
-  .tab-navbar {
+  .menu {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .parallel-lines {
+    opacity: 1;
+  }
+
+  .cross {
+    position: absolute;
+    top: 15px;
+    right: -3px;
+
+    cursor: pointer;
+  }
+  .block {
     display: block;
+  }
+
+  .menu-back {
+    position: absolute;
+    border: none;
+    background: transparent;
+    top: 5px;
+    left: 25px;
+    cursor: pointer;
   }
 }

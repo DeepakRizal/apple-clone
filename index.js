@@ -5,6 +5,12 @@ const searchButton = document.querySelector(".search-button");
 const bagButton = document.querySelector(".bag-button");
 const contentWrapper = document.querySelector(".main-content");
 const tabLinks = document.querySelectorAll(".tab-link");
+const tabMenu = document.querySelector(".menu");
+const tabNavBar = document.querySelector(".tab-navbar");
+const cross = document.querySelector(".cross");
+const paralleLines = document.querySelector(".parallel-lines");
+const logo = document.querySelector(".logo");
+const menuBack = document.querySelector(".menu-back");
 
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
@@ -53,6 +59,7 @@ bag.addEventListener("mouseleave", (e) => {
 tabLinks.forEach((tablink) => {
   tablink.addEventListener("click", (e) => {
     e.preventDefault();
+    menuBack.classList.remove("tab-none");
     const parentElement = e.target.closest(".tab-links");
     parentElement.innerHTML = "";
 
@@ -60,4 +67,18 @@ tabLinks.forEach((tablink) => {
     tabDropdown.style.display = "block";
     parentElement.appendChild(tabDropdown);
   });
+});
+
+// Show navigation and cross icon, hide parallel lines
+tabMenu.addEventListener("click", () => {
+  tabNavBar.classList.toggle("block");
+  paralleLines.classList.toggle("tab-none");
+  cross.classList.toggle("tab-none");
+  logo.classList.toggle("tab-none");
+  searchButton.classList.toggle("tab-none");
+  bagButton.classList.toggle("tab-none");
+});
+
+menuBack.addEventListener("click", () => {
+  console.log("clicked");
 });
