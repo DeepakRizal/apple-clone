@@ -11,6 +11,7 @@ const cross = document.querySelector(".cross");
 const paralleLines = document.querySelector(".parallel-lines");
 const logo = document.querySelector(".logo");
 const menuBack = document.querySelector(".menu-back");
+const tabNavLink = document.querySelectorAll(".tab-nav-link");
 
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
@@ -66,6 +67,15 @@ tabLinks.forEach((tablink) => {
     const tabDropdown = e.target.nextElementSibling;
     tabDropdown.style.display = "block";
     parentElement.appendChild(tabDropdown);
+
+    menuBack.addEventListener("click", () => {
+      tabDropdown.style.display = "none";
+      parentElement.innerHTML = "";
+      menuBack.classList.add("tab-none");
+      tabNavLink.forEach((link) => {
+        parentElement.appendChild(link);
+      });
+    });
   });
 });
 
@@ -77,8 +87,4 @@ tabMenu.addEventListener("click", () => {
   logo.classList.toggle("tab-none");
   searchButton.classList.toggle("tab-none");
   bagButton.classList.toggle("tab-none");
-});
-
-menuBack.addEventListener("click", () => {
-  console.log("clicked");
 });
