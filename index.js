@@ -62,19 +62,24 @@ tabLinks.forEach((tablink) => {
     e.preventDefault();
     menuBack.classList.remove("tab-none");
     const parentElement = e.target.closest(".tab-links");
-    parentElement.innerHTML = "";
+
+    tabLinks.forEach((tablink) => {
+      tablink.classList.add("tab-none");
+    });
 
     const tabDropdown = e.target.nextElementSibling;
+
     tabDropdown.style.display = "block";
-    parentElement.appendChild(tabDropdown);
+    const liElement = e.target.closest(".tab-nav-link");
+
+    console.log(liElement);
 
     menuBack.addEventListener("click", () => {
       tabDropdown.style.display = "none";
-      parentElement.innerHTML = "";
-      menuBack.classList.add("tab-none");
-      tabNavLink.forEach((link) => {
-        parentElement.appendChild(link);
+      tabLinks.forEach((tablink) => {
+        tablink.classList.remove("tab-none");
       });
+      menuBack.classList.add("tab-none");
     });
   });
 });
