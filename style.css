@@ -175,6 +175,49 @@ header {
   display: none;
 }
 
+/* chapternav styling */
+/* chapternav styling */
+
+.chapternav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  padding-bottom: 30px;
+}
+
+.chapternav-items {
+  display: flex;
+  gap: 28px;
+}
+
+.chapternav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 1.3333733333;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.chapternav-item .iphone-se {
+  width: 19px;
+}
+
+.chapternav-item .iphone-16-pro {
+  width: 30px;
+}
+
+.chapternav-item .ios-18 {
+  width: 32px;
+}
+
+.chapternav-new {
+  color: #be4400;
+}
+
 /* media queries */
 @media (max-width: 850px) {
   .dropdown {
@@ -255,6 +298,10 @@ header {
     font-size: 30px;
     color: #333336;
     font-weight: bold;
+  }
+
+  .tab-links li a:hover {
+    color: black;
   }
 
   .tab-navbar {
