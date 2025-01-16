@@ -61,7 +61,6 @@ tabLinks.forEach((tablink) => {
   tablink.addEventListener("click", (e) => {
     e.preventDefault();
     menuBack.classList.remove("tab-none");
-    const parentElement = e.target.closest(".tab-links");
 
     tabLinks.forEach((tablink) => {
       tablink.classList.add("tab-none");
@@ -70,9 +69,6 @@ tabLinks.forEach((tablink) => {
     const tabDropdown = e.target.nextElementSibling;
 
     tabDropdown.style.display = "block";
-    const liElement = e.target.closest(".tab-nav-link");
-
-    console.log(liElement);
 
     menuBack.addEventListener("click", () => {
       tabDropdown.style.display = "none";
