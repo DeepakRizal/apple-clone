@@ -7,10 +7,6 @@
   font-family: "Open Sans", serif;
 }
 
-body {
-  position: relative;
-}
-
 header {
   background-color: #fafafc;
 }
@@ -190,6 +186,7 @@ header {
   overflow: hidden;
   padding: 0 35px 30px 0;
   width: 100%;
+  position: relative;
 }
 
 .chapternav-items {
@@ -251,6 +248,55 @@ header {
   justify-content: center;
   background-color: #f5f5f7;
   padding: 10px;
+}
+
+/* hero section styling */
+
+.video {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.welcome-video {
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 80px;
+  background-color: #ffffff;
+}
+
+.hero-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  width: 87.5vw;
+  max-width: 1680px;
+}
+
+.hero-text .iphone-text {
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.welcome-header-description {
+  font-size: 28px;
+  line-height: 1.1428571429;
+  font-weight: 600;
+  letter-spacing: 0.007em;
 }
 
 /* media queries */
@@ -384,16 +430,20 @@ header {
   }
 
   .backward {
-    top: 56%;
-    left: 20px;
+    top: 30%;
+    left: 15px;
   }
 
   .forward {
-    top: 64%;
-    right: 20px;
+    top: 47%;
+    right: 15px;
   }
 
   .tab-none {
     display: none;
+  }
+  .ribbon {
+    font-size: 12px;
+    text-align: center;
   }
 }
