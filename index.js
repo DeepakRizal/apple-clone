@@ -112,3 +112,19 @@ backward.addEventListener("click", () => {
   chapternav.style.paddingLeft = "0";
   forward.style.display = "block";
 });
+
+//checking if the screen is large and if it is large then the button should not be visible
+const isMediumScreen = window.matchMedia("(max-width:850px)");
+
+function updateForwardButtonDisplay() {
+  if (isMediumScreen.matches) {
+    forward.style.display = "block";
+  } else {
+    forward.style.display = "none";
+  }
+}
+
+isMediumScreen.addEventListener("change", updateForwardButtonDisplay);
+
+// Initial check
+updateForwardButtonDisplay();
