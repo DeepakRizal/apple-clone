@@ -7,6 +7,10 @@
   font-family: "Open Sans", serif;
 }
 
+body {
+  position: relative;
+}
+
 header {
   background-color: #fafafc;
 }
@@ -183,12 +187,23 @@ header {
   align-items: center;
   justify-content: center;
   margin-top: 25px;
-  padding-bottom: 30px;
+  overflow: hidden;
+  padding: 0 35px 30px 0;
+  width: 100%;
 }
 
 .chapternav-items {
   display: flex;
-  gap: 28px;
+  align-items: center;
+  gap: 20px;
+  padding-left: 5px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  transition: scroll-behavior 0.3s ease-in-out;
+}
+
+.chapternav-items::-webkit-scrollbar {
+  display: none;
 }
 
 .chapternav-item {
@@ -200,6 +215,9 @@ header {
   line-height: 1.3333733333;
   font-weight: 400;
   letter-spacing: -0.01em;
+  flex-shrink: 0;
+  width: 70px;
+  margin-right: 16px;
 }
 
 .chapternav-item .iphone-se {
@@ -216,6 +234,14 @@ header {
 
 .chapternav-new {
   color: #be4400;
+}
+
+.backward {
+  display: none;
+}
+
+.forward {
+  display: none;
 }
 
 /* media queries */
@@ -240,10 +266,6 @@ header {
   }
   .none {
     display: block;
-  }
-
-  .tab-none {
-    display: none;
   }
 
   /* tablet styling */
@@ -337,5 +359,32 @@ header {
     top: 5px;
     left: 25px;
     cursor: pointer;
+  }
+
+  /* chapternav styling */
+  /* chapternav styling */
+
+  .backward,
+  .forward {
+    display: block;
+    position: absolute;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .backward {
+    top: 56%;
+    left: 20px;
+  }
+
+  .forward {
+    top: 64%;
+    right: 20px;
+  }
+
+  .tab-none {
+    display: none;
   }
 }

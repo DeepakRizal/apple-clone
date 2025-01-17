@@ -12,6 +12,10 @@ const paralleLines = document.querySelector(".parallel-lines");
 const logo = document.querySelector(".logo");
 const menuBack = document.querySelector(".menu-back");
 const tabNavLink = document.querySelectorAll(".tab-nav-link");
+const forward = document.querySelector(".forward");
+const chatNavItems = document.querySelector(".chapternav-items");
+const backward = document.querySelector(".backward");
+const chapternav = document.querySelector(".chapternav-wrapper");
 
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
@@ -88,4 +92,23 @@ tabMenu.addEventListener("click", () => {
   logo.classList.toggle("tab-none");
   searchButton.classList.toggle("tab-none");
   bagButton.classList.toggle("tab-none");
+});
+
+forward.addEventListener("click", () => {
+  const scrollAmount = chatNavItems.offsetWidth;
+  chatNavItems.scrollLeft += scrollAmount;
+  forward.style.display = "none";
+  chapternav.style.paddingRight = "0";
+  backward.classList.remove("tab-none");
+  console.log(backward);
+  chapternav.style.paddingLeft = "50px";
+});
+
+backward.addEventListener("click", () => {
+  const scrollAmount = chatNavItems.offsetWidth;
+  chatNavItems.scrollLeft -= scrollAmount;
+  chapternav.style.paddingRight = "35px";
+  backward.classList.add("tab-none");
+  chapternav.style.paddingLeft = "0";
+  forward.style.display = "block";
 });
