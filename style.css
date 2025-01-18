@@ -45,6 +45,7 @@ header {
   height: 0;
   opacity: 0;
   left: 0;
+  z-index: 10;
   pointer-events: none;
   transition: height 0.2s ease, opacity 0.2s ease;
 }
@@ -297,6 +298,96 @@ header {
   line-height: 1.1428571429;
   font-weight: 600;
   letter-spacing: 0.007em;
+}
+
+/* section consider styling */
+
+.card {
+  background: url("https://www.apple.com/in/iphone/home/images/overview/consider/apple_intelligence__gbh77cvflkia_xlarge.jpg");
+  height: 550px;
+  width: 100%; /* Default to full width */
+  max-width: 450px; /* Restrict maximum width */
+  background-position: center;
+  background-size: cover;
+  padding: 32px;
+  border-radius: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.section-consider {
+  padding: 100px;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.cards-container {
+  overflow-x: auto;
+  width: 100%;
+  position: relative;
+  padding: 50px;
+}
+
+.cards-container::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.section-header {
+  padding-bottom: 50px;
+}
+
+.section-consider-container h2 {
+  font-size: 56px;
+  line-height: 1.0714285714;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.feature-card-copy {
+  color: #f5f5f7;
+}
+
+.feature-card-label {
+  font-size: 17px;
+  line-height: 1.2353641176;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+}
+
+.feature-card-headline {
+  font-size: 24px;
+  line-height: 1.1428571429;
+  font-weight: 600;
+  letter-spacing: 0.007em;
+  margin-top: 8px;
+  min-width: 300px;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+}
+
+.buttons-cards-scroll {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  bottom: 0;
+  z-index: 10;
+}
+
+.buttons-cards-scroll button {
+  border: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #636365;
 }
 
 /* media queries */
