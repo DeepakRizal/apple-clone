@@ -16,6 +16,9 @@ const forward = document.querySelector(".forward");
 const chatNavItems = document.querySelector(".chapternav-items");
 const backward = document.querySelector(".backward");
 const chapternav = document.querySelector(".chapternav-wrapper");
+const cardScrollForward = document.querySelector(".cards-scroll-forward");
+const cardScrollBackward = document.querySelector(".cards-scroll-backward");
+const cardsContainer = document.querySelector(".cards-container");
 
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
@@ -111,6 +114,15 @@ backward.addEventListener("click", () => {
   backward.classList.add("tab-none");
   chapternav.style.paddingLeft = "0";
   forward.style.display = "block";
+});
+
+//caraousal logic for the consider cards
+cardScrollForward.addEventListener("click", () => {
+  cardsContainer.scrollLeft += 400;
+});
+
+cardScrollBackward.addEventListener("click", () => {
+  cardsContainer.scrollLeft -= 400;
 });
 
 //checking if the screen is large and if it is large then the button should not be visible

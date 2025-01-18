@@ -324,8 +324,11 @@ header {
 .cards-container {
   overflow-x: auto;
   width: 100%;
-  position: relative;
   padding: 50px;
+  scroll-behavior: smooth;
+  transition: scroll-behavior 0.3s ease-in-out;
+  display: flex;
+  gap: 30px;
 }
 
 .cards-container::-webkit-scrollbar {
@@ -363,18 +366,12 @@ header {
   min-width: 300px;
 }
 
-.cards {
-  display: flex;
-  gap: 30px;
-}
-
 .buttons-cards-scroll {
   display: flex;
   gap: 10px;
   position: absolute;
-  right: 0;
-  bottom: 40px;
-  bottom: 0;
+  right: 100px;
+  bottom: 100px;
   z-index: 10;
 }
 
@@ -388,6 +385,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #636365;
+  cursor: pointer;
 }
 
 /* media queries */
