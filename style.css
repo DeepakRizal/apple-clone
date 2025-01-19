@@ -311,7 +311,13 @@ header {
   background-size: cover;
   padding: 32px;
   border-radius: 20px;
-  box-sizing: border-box; /* Ensure padding is included in width */
+  box-sizing: border-box;
+  transition: 0.3s ease-in-out; /* Ensure padding is included in width */
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }
 
 .section-consider {
@@ -386,6 +392,130 @@ header {
   align-items: center;
   background-color: #636365;
   cursor: pointer;
+}
+
+/* styling  all explore models */
+.explore-all-models {
+  padding: 150px;
+  background-color: #f5f5f7;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+
+.compare-model {
+  color: blue;
+  text-decoration: underline;
+}
+
+.iphones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.models-container {
+  display: flex;
+  gap: 100px;
+}
+
+.iphones,
+.image-container,
+.description-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image-container {
+  margin-bottom: 40px;
+}
+
+.description-container {
+  gap: 20px;
+}
+
+.actions-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.learn-more-btn {
+  background-color: #0071e3;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+}
+
+.buy-link {
+  color: #0071e3;
+}
+
+.model-name {
+  font-size: 28px;
+  line-height: 1.14286;
+  font-weight: 700;
+  letter-spacing: 0.007em;
+}
+
+.price {
+  font-size: 17px;
+  line-height: 1.4705882353;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+}
+
+.status-new {
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #ba4400;
+}
+
+.iphone-image {
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.iphone-image:hover {
+  transform: scale(1.05);
+}
+
+.features-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 150px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 11px;
+  gap: 10px;
+}
+
+.welcome-header-description {
+  font-size: 56px;
+  line-height: 1.07143;
+  font-weight: 600;
+  letter-spacing: -0.005em;
 }
 
 /* media queries */
