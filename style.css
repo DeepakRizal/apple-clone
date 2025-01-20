@@ -527,7 +527,7 @@ header {
   flex-direction: column;
   gap: 100px;
   scroll-behavior: smooth;
-  transition: scroll-behavior 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .models-with-features::-webkit-scrollbar {
@@ -632,11 +632,22 @@ header {
   display: flex;
   gap: 20px;
   overflow-x: auto;
+  scroll-behavior: smooth;
+  transition: 0.3s ease-in-out;
 }
+
+.gallery-items::-webkit-scrollbar {
+  display: none;
+}
+
 .gallery-card {
   background-color: white;
   padding: 20px;
   border-radius: 20px;
+}
+
+.gallery-card:hover {
+  transform: scale(1.05);
 }
 
 .gallery-card h2,
@@ -665,6 +676,26 @@ header {
 .incentive .p-link {
   color: #0071e3;
   text-decoration: underline;
+}
+
+.incentive-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.incentive-buttons button {
+  border: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #636365;
+  cursor: pointer;
 }
 
 /* media queries */

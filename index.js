@@ -22,6 +22,13 @@ const cardsContainer = document.querySelector(".cards-container");
 const modelsFeatures = document.querySelector(".models-with-features");
 const featureBackward = document.querySelector(".feature-scroll-backward");
 const featureForward = document.querySelector(".feature-scroll-forward");
+const galleryItems = document.querySelector(".gallery-items");
+const incentiveScrollForward = document.querySelector(
+  ".incentive-scroll-forward"
+);
+const incentiveScrollBackward = document.querySelector(
+  ".incentive-scroll-backward"
+);
 
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
@@ -135,6 +142,15 @@ featureForward.addEventListener("click", () => {
 
 featureBackward.addEventListener("click", () => {
   modelsFeatures.scrollLeft -= 400;
+});
+
+// incentive scroll logic
+incentiveScrollForward.addEventListener("click", () => {
+  galleryItems.scrollLeft += 400;
+});
+
+incentiveScrollBackward.addEventListener("click", () => {
+  galleryItems.scrollLeft -= 400;
 });
 
 //checking if the screen is large and if it is large then the button should not be visible
