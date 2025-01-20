@@ -19,6 +19,9 @@ const chapternav = document.querySelector(".chapternav-wrapper");
 const cardScrollForward = document.querySelector(".cards-scroll-forward");
 const cardScrollBackward = document.querySelector(".cards-scroll-backward");
 const cardsContainer = document.querySelector(".cards-container");
+const modelsFeatures = document.querySelector(".models-with-features");
+const featureBackward = document.querySelector(".feature-scroll-backward");
+const featureForward = document.querySelector(".feature-scroll-forward");
 
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
@@ -123,6 +126,15 @@ cardScrollForward.addEventListener("click", () => {
 
 cardScrollBackward.addEventListener("click", () => {
   cardsContainer.scrollLeft -= 400;
+});
+
+// explore all models scroll logic
+featureForward.addEventListener("click", () => {
+  modelsFeatures.scrollLeft += 400;
+});
+
+featureBackward.addEventListener("click", () => {
+  modelsFeatures.scrollLeft -= 400;
 });
 
 //checking if the screen is large and if it is large then the button should not be visible
