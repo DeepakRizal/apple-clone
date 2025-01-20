@@ -623,6 +623,50 @@ header {
   margin-bottom: 100px;
 }
 
+.incentive {
+  padding: 150px;
+  background-color: #f5f5f7;
+}
+
+.gallery-items {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+.gallery-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.gallery-card h2,
+.gallery-card p,
+.gallery-card img {
+  margin-bottom: 20px;
+}
+
+.gallery-card h2 {
+  min-width: 300px;
+}
+
+.incentive header {
+  background-color: #f5f5f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px;
+}
+
+.incentive header h2 {
+  font-size: 40px;
+  max-width: 500px;
+}
+
+.incentive .p-link {
+  color: #0071e3;
+  text-decoration: underline;
+}
+
 /* media queries */
 @media (max-width: 850px) {
   .dropdown {
