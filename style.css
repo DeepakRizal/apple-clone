@@ -741,6 +741,32 @@ header {
   opacity: 1;
 }
 
+/* footer styling */
+.footer {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 150px 0;
+  background-color: #f5f5f7;
+  font-size: 12px;
+}
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-column p {
+  color: #4a4445;
+}
+
 /* media queries */
 @media (max-width: 850px) {
   .dropdown {
