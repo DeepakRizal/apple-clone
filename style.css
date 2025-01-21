@@ -729,9 +729,16 @@ header {
 }
 
 .accordian li p {
-  max-width: 400px;
-  margin-bottom: 20px;
-  transition: 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  max-width: 500px;
+  opacity: 0;
+  transition: max-height 0.2s ease-in;
+}
+
+.accordian li p.active {
+  max-height: 500px;
+  opacity: 1;
 }
 
 /* media queries */

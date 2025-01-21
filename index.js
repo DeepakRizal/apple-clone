@@ -161,14 +161,11 @@ incentiveScrollBackward.addEventListener("click", () => {
 accordianTitle.forEach((title) => {
   title.addEventListener("click", (e) => {
     const nearestTextElement = e.target.nextElementSibling;
-    if (nearestTextElement.classList.contains) {
-      nearestTextElement.classList.remove("none");
+    if (!nearestTextElement.classList.contains("active")) {
+      nearestTextElement.classList.add("active");
       Array.from(accordianText).forEach((text) => {
-        if (
-          text.textContent !== nearestTextElement.textContent &&
-          !text.classList.contains("none")
-        ) {
-          text.classList.add("none");
+        if (text.textContent !== nearestTextElement.textContent) {
+          text.classList.remove("active");
         }
       });
     }
