@@ -30,6 +30,9 @@ const incentiveScrollBackward = document.querySelector(
   ".incentive-scroll-backward"
 );
 
+const accordianTitle = document.querySelectorAll(".accordian-title");
+const accordianText = document.querySelectorAll(".accordian-paragraph-text ");
+
 dropDowns.forEach((dropdown) => {
   const link = dropdown.querySelector("a");
   const content = dropdown.querySelector(".dropdown-content");
@@ -151,6 +154,25 @@ incentiveScrollForward.addEventListener("click", () => {
 
 incentiveScrollBackward.addEventListener("click", () => {
   galleryItems.scrollLeft -= 400;
+});
+
+//accordian opening and closing functionality
+
+accordianTitle.forEach((title) => {
+  title.addEventListener("click", (e) => {
+    const nearestTextElement = e.target.nextElementSibling;
+    if (nearestTextElement.classList.contains) {
+      nearestTextElement.classList.remove("none");
+      Array.from(accordianText).forEach((text) => {
+        if (
+          text.textContent !== nearestTextElement.textContent &&
+          !text.classList.contains("none")
+        ) {
+          text.classList.add("none");
+        }
+      });
+    }
+  });
 });
 
 //checking if the screen is large and if it is large then the button should not be visible
