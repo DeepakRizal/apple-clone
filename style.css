@@ -791,6 +791,16 @@ header {
     display: block;
   }
 
+  .hero-text .iphone-text {
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  .welcome-header-description {
+    font-size: 30px;
+    color: #1d1d1f;
+  }
+
   /* tablet styling */
 
   .tab-dropdown {
@@ -913,5 +923,56 @@ header {
   .ribbon {
     font-size: 12px;
     text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-text {
+    display: block;
+  }
+
+  .hero-text .iphone-text {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .welcome-header-description {
+    font-size: 21px;
+    color: #1d1d1f;
+  }
+
+  .section-consider {
+    padding: 20px 20px;
+  }
+
+  .section-consider-container h2 {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .card {
+    min-width: 250px;
+    padding: 30px 20px;
+  }
+
+  .feature-card-headline {
+    font-size: 16px;
+  }
+
+  .section-header {
+    padding-bottom: 10px;
+  }
+
+  .buttons-cards-scroll {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .explore-all-models {
+    padding: 0;
+  }
+
+  .features-container {
+    margin-left: 163px;
   }
 }
