@@ -924,6 +924,34 @@ header {
     font-size: 12px;
     text-align: center;
   }
+
+  .incentive {
+    padding: 50px;
+  }
+
+  .incentive header {
+    margin: 10px;
+  }
+
+  .section-banner {
+    padding: 50px;
+  }
+
+  .section-banner .container img {
+    border-radius: 18px;
+  }
+
+  .significant-others {
+    padding: 10px;
+  }
+
+  .section-consider-container {
+    font-size: 30px;
+  }
+
+  .section-consider-container h2 {
+    font-size: 46px;
+  }
 }
 
 @media (max-width: 500px) {
