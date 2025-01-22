@@ -185,7 +185,7 @@ header {
   justify-content: center;
   margin-top: 25px;
   overflow: hidden;
-  padding: 0 35px 30px 0;
+  padding: 0 35px 30px 34px;
   width: 100%;
   position: relative;
 }
@@ -974,5 +974,54 @@ header {
 
   .features-container {
     margin-left: 163px;
+  }
+
+  .section-banner {
+    padding: 10px;
+    padding-top: 30px;
+  }
+
+  .section-banner .container img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .section-banner-header h2 {
+    font-size: 20px;
+  }
+
+  .section-banner .container .container-text {
+    top: 10%;
+    left: 5%;
+  }
+
+  .section-banner-header .container .container-text h3 {
+    font-size: 16px;
+  }
+
+  .section-banner-header h2 {
+    margin-bottom: 56px;
+  }
+
+  .incentive {
+    padding: 15px 15px;
+  }
+  .incentive header {
+    display: block;
+    margin: 10px;
+  }
+
+  .incentive header h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .significant-others {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .significant-others-image img {
+    width: 200px;
   }
 }

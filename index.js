@@ -113,66 +113,69 @@ tabMenu.addEventListener("click", () => {
   bagButton.classList.toggle("tab-none");
 });
 
-const isSmallScreen = window.matchMedia("(max-width: 500px)");
+const updateButtonVisibility = () => {
+  const scrollLeft = chatNavItems.scrollLeft;
+  const maxScroll = chatNavItems.scrollWidth - chatNavItems.offsetWidth;
+
+  if (scrollLeft === 0) {
+    backward.style.display = "none";
+    forward.style.display = "block";
+  } else if (scrollLeft >= maxScroll) {
+    forward.style.display = "none";
+    backward.style.display = "block";
+  } else {
+    forward.style.display = "block";
+    backward.style.display = "block";
+  }
+};
 
 forward.addEventListener("click", () => {
-  if (!isMediumScreen.matches) {
-    const scrollAmount = chatNavItems.offsetWidth;
-    chatNavItems.scrollLeft += scrollAmount;
-    forward.style.display = "none";
-    chapternav.style.paddingRight = "0";
-    backward.classList.remove("tab-none");
-    console.log(backward);
-    chapternav.style.paddingLeft = "50px";
-  } else {
-    chatNavItems.scrollLeft += 250;
-    chapternav.style.paddingRight = "30px";
-    backward.classList.remove("tab-none");
-    chapternav.style.paddingLeft = "50px";
-  }
+  const scrollAmount =
+    window.innerWidth <= 768 ? 200 : chatNavItems.offsetWidth;
+  chatNavItems.scrollLeft += scrollAmount;
+  setTimeout(updateButtonVisibility, 200); // Wait for the scroll to update
 });
 
 backward.addEventListener("click", () => {
-  if (!isMediumScreen.matches) {
-    const scrollAmount = chatNavItems.offsetWidth;
-    chatNavItems.scrollLeft -= scrollAmount;
-    chapternav.style.paddingRight = "35px";
-    backward.classList.add("tab-none");
-    chapternav.style.paddingLeft = "0";
-    forward.style.display = "block";
-  } else {
-    chatNavItems.scrollLeft -= 250;
-    chapternav.style.paddingRight = "35px";
-    chapternav.style.paddingLeft = "30px";
-    forward.style.display = "block";
-  }
+  const scrollAmount =
+    window.innerWidth <= 768 ? 200 : chatNavItems.offsetWidth;
+  chatNavItems.scrollLeft -= scrollAmount;
+  setTimeout(updateButtonVisibility, 200); // Wait for the scroll to update
 });
+
+// Initialize visibility on load
+document.addEventListener("DOMContentLoaded", () => {
+  updateButtonVisibility();
+});
+
+// Update visibility on scroll
+chatNavItems.addEventListener("scroll", updateButtonVisibility);
 
 //caraousal logic for the consider cards
 cardScrollForward.addEventListener("click", () => {
-  cardsContainer.scrollLeft += 400;
+  cardsContainer.scrollLeft += 300;
 });
 
 cardScrollBackward.addEventListener("click", () => {
-  cardsContainer.scrollLeft -= 400;
+  cardsContainer.scrollLeft -= 300;
 });
 
 // explore all models scroll logic
 featureForward.addEventListener("click", () => {
-  modelsFeatures.scrollLeft += 400;
+  modelsFeatures.scrollLeft += 300;
 });
 
 featureBackward.addEventListener("click", () => {
-  modelsFeatures.scrollLeft -= 400;
+  modelsFeatures.scrollLeft -= 300;
 });
 
 // incentive scroll logic
 incentiveScrollForward.addEventListener("click", () => {
-  galleryItems.scrollLeft += 400;
+  galleryItems.scrollLeft += 360;
 });
 
 incentiveScrollBackward.addEventListener("click", () => {
-  galleryItems.scrollLeft -= 400;
+  galleryItems.scrollLeft -= 360;
 });
 
 //accordian opening and closing functionality
