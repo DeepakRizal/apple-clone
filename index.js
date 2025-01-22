@@ -100,6 +100,9 @@ tabLinks.forEach((tablink) => {
   });
 });
 
+//check for small screen
+const inSmallScreen = window.matchMedia("(max-width:500px)");
+
 // Show navigation and cross icon, hide parallel lines
 tabMenu.addEventListener("click", () => {
   tabNavBar.classList.toggle("block");
@@ -110,23 +113,39 @@ tabMenu.addEventListener("click", () => {
   bagButton.classList.toggle("tab-none");
 });
 
+const isSmallScreen = window.matchMedia("(max-width: 500px)");
+
 forward.addEventListener("click", () => {
-  const scrollAmount = chatNavItems.offsetWidth;
-  chatNavItems.scrollLeft += scrollAmount;
-  forward.style.display = "none";
-  chapternav.style.paddingRight = "0";
-  backward.classList.remove("tab-none");
-  console.log(backward);
-  chapternav.style.paddingLeft = "50px";
+  if (!isMediumScreen.matches) {
+    const scrollAmount = chatNavItems.offsetWidth;
+    chatNavItems.scrollLeft += scrollAmount;
+    forward.style.display = "none";
+    chapternav.style.paddingRight = "0";
+    backward.classList.remove("tab-none");
+    console.log(backward);
+    chapternav.style.paddingLeft = "50px";
+  } else {
+    chatNavItems.scrollLeft += 250;
+    chapternav.style.paddingRight = "30px";
+    backward.classList.remove("tab-none");
+    chapternav.style.paddingLeft = "50px";
+  }
 });
 
 backward.addEventListener("click", () => {
-  const scrollAmount = chatNavItems.offsetWidth;
-  chatNavItems.scrollLeft -= scrollAmount;
-  chapternav.style.paddingRight = "35px";
-  backward.classList.add("tab-none");
-  chapternav.style.paddingLeft = "0";
-  forward.style.display = "block";
+  if (!isMediumScreen.matches) {
+    const scrollAmount = chatNavItems.offsetWidth;
+    chatNavItems.scrollLeft -= scrollAmount;
+    chapternav.style.paddingRight = "35px";
+    backward.classList.add("tab-none");
+    chapternav.style.paddingLeft = "0";
+    forward.style.display = "block";
+  } else {
+    chatNavItems.scrollLeft -= 250;
+    chapternav.style.paddingRight = "35px";
+    chapternav.style.paddingLeft = "30px";
+    forward.style.display = "block";
+  }
 });
 
 //caraousal logic for the consider cards
